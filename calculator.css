@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.calculator {
+  position: relative;
+  display: grid;
+}
+
+.display {
+  grid-column: span 4;
+  height: 100px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 20px;
+  background: black;
+  color: white;
+  text-align: right;
+}
+
+.calculator button {
+  display: grid;
+  width: 80px;
+  height: 70px;
+  color: #000;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.calculator button:hover {
+  background: gray;
+  cursor: pointer;
+}
+
+.calculator button:active {
+  background: #74ff3b;
+  color: #111;
+}
+
+.calculator button:focus {
+  outline: none;
+}
+
+.calculator button.clear {
+  grid-column: span 2;
+  width: 160px;
+  background: rgb(245, 116, 116);
+}
+
+.calculator button.clear:active {
+  background: red;
+}
+
+.calculator button.plus {
+  grid-row: span 2;
+  height: 140px;
+}
+
+.calculator button.equal {
+  background: #03b1ff;
+}
+
+.calculator button.equal:active {
+  background: #74ff3b;
+}
