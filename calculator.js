@@ -60,7 +60,6 @@ calculatorContainer.addEventListener("click", (e) => {
 
   const symbol = target.dataset.symbol;
   const buttonContent = target.textContent;
-  // const inputValue = display.value;
 
   if (!symbol) {
     currentType = "number";
@@ -101,14 +100,6 @@ calculatorContainer.addEventListener("click", (e) => {
       }
     }
   } else {
-    // Can we create a function to find arithmetic operators?
-    // if (
-    //   operators === "add" ||
-    //   operators === "subtract" ||
-    //   operators === "percent" ||
-    //   operators === "multiply" ||
-    //   operators === "divide"
-    // ) {
     if (isArithmeticOperator(symbol)) {
       currentType = "arithmeticOperator";
       if (lastType === "arithmeticOperator") {
@@ -125,7 +116,7 @@ calculatorContainer.addEventListener("click", (e) => {
           calculator.rightOperand = null;
         }
       }
-      // display.value = inputValue + buttonContent;
+
       calculator.currArithmeticOperator = symbol;
     }
 
@@ -138,7 +129,6 @@ calculatorContainer.addEventListener("click", (e) => {
       calculator.leftOperand = "0";
       calculator.rightOperand = null;
       calculator.currArithmeticOperator = null;
-      // console.log("equal-to key");
     }
 
     if (symbol === "clear-all") {
@@ -147,7 +137,6 @@ calculatorContainer.addEventListener("click", (e) => {
       calculator.leftOperand = "0";
       calculator.rightOperand = null;
       calculator.currArithmeticOperator = null;
-      // console.log("clear key");
     }
   }
 
